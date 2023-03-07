@@ -1,0 +1,252 @@
+@import url(https://fonts.googleapis.com/css2?family=Golos+Text&display=swap);
+
+* {
+  box-sizing: border-box;
+  font-family: 'Golos Text', sans-serif;
+}
+
+body {
+  margin: 0;
+
+  height: 100vh;
+  background: linear-gradient(-45deg, #ffff22, #01d0ff, #0a6485, #8969cd);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.game-container {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header__title {
+  color: aliceblue;
+}
+
+.overlay {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s;
+}
+
+.overlay.active {
+  opacity: 1;
+  transition: all 0.25s;
+  pointer-events: all;
+}
+
+.modal {
+  background-color: aliceblue;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.25s;
+  transform: scale(0.5);
+}
+
+.modal.active {
+  transform: scale(1);
+  transition: all 0.25s;
+  pointer-events: all;
+}
+
+.card-board {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card {
+  display: flex;
+  min-width: 3rem;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: calc((100% / 3) - 2rem);
+
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+
+  color: transparent;
+  border-radius: 10px;
+  font-size: 5rem;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: all 0.25s;
+}
+
+.card:hover {
+  background: rgba(42, 223, 255, 0.772);
+  transition: all 0.25s;
+  transform: scale(1.01);
+}
+
+.card.open {
+  background: rgba(65, 178, 198, 0.772);
+  color: aliceblue;
+  transition: all 0.25s;
+  transform: scale(0.95);
+}
+
+.card.success {
+  background: rgba(27, 203, 65, 0.4);
+  color: aliceblue;
+  transition: all 0.25s;
+}
+
+.button {
+  margin-top: 5rem;
+  padding: 1rem;
+  color: aliceblue;
+  -webkit-user-select: none;
+  user-select: none;
+
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: rgba(27, 203, 65, 0.4);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  border: none;
+}
+
+.button:hover {
+  transition: all 0.25s;
+  transform: scale(1.05);
+}
+
+.win-text {
+  font-size: 5rem;
+  color: rgba(27, 203, 65, 0.4);
+}
+
+.info-text {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 1px) {
+  .card {
+    flex-basis: calc((100% / 3) - 1rem);
+    min-height: 0.1rem;
+    font-size: 1.5rem;
+  }
+  .header__title {
+    font-size: 2rem;
+  }
+  .modal {
+    width: 37vh;
+    height: 35vh;
+  }
+  .button {
+    font-size: 0.5rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .card {
+    flex-basis: calc((100% / 3) - 1rem);
+    min-height: 5rem;
+    font-size: 5rem;
+  }
+  .header__title {
+    font-size: 2.5rem;
+  }
+  .modal {
+    width: 40vh;
+    height: 40vh;
+  }
+  .button {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .card {
+    flex-basis: calc((100% / 3) - 2rem);
+    min-height: 5rem;
+    font-size: 5rem;
+  }
+  .header__title {
+    font-size: 3.5rem;
+  }
+  .modal {
+    width: 50vh;
+    height: 50vh;
+  }
+  .button {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card {
+    flex-basis: calc((100% / 3) - 2rem);
+    min-height: 8rem;
+    font-size: 5rem;
+    font-size: 5rem;
+  }
+  .header__title {
+    font-size: 4rem;
+  }
+  .modal {
+    width: 50vh;
+    height: 50vh;
+  }
+  .button {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .card {
+    flex-basis: calc((100% / 3) - 2rem);
+    min-height: 10rem;
+    font-size: 5rem;
+  }
+  .header__title {
+    font-size: 5rem;
+  }
+  .modal {
+    width: 50vh;
+    height: 50vh;
+  }
+  .button {
+    font-size: 2rem;
+  }
+}
