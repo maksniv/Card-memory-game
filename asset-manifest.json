@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Card-memory-game/static/css/main.1f7c470e.css",
+    "main.css": "/Card-memory-game/static/css/main.2f9cbbc7.css",
     "main.js": "/Card-memory-game/static/js/main.eb358a8e.js",
     "index.html": "/Card-memory-game/index.html",
-    "main.1f7c470e.css.map": "/Card-memory-game/static/css/main.1f7c470e.css.map",
+    "main.2f9cbbc7.css.map": "/Card-memory-game/static/css/main.2f9cbbc7.css.map",
     "main.eb358a8e.js.map": "/Card-memory-game/static/js/main.eb358a8e.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f7c470e.css",
+    "static/css/main.2f9cbbc7.css",
     "static/js/main.eb358a8e.js"
   ]
 }
