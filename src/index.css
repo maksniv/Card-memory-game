@@ -41,6 +41,7 @@ body {
 
 .header__title {
   color: aliceblue;
+  text-align:center;
 }
 
 .overlay {
@@ -167,7 +168,7 @@ body {
     font-size: 1.8rem;
   }
   .header__title {
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
   .modal {
     width: 45vh;
