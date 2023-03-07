@@ -3,7 +3,7 @@ import Card from './card';
 
 const CardBoard = ({ cards, toggleClassCard }) => {
   return (
-    <div class="card-board">
+    <div className="card-board">
       {cards.map((card) => {
         return (
           <Card

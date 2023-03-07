@@ -5,17 +5,17 @@ const Modal = ({ modal, setModal, failsCount, successCount, startGame }) => {
   return (
     <>
       <div
-        class={`overlay ${modal ? 'active' : ''}`}
+        className={`overlay ${modal ? 'active' : ''}`}
         onClick={() => setModal(false)}
       >
         <div
-          class={`modal ${modal ? 'active' : ''}`}
+          className={`modal ${modal ? 'active' : ''}`}
           onClick={(event) => event.stopPropagation()}
         >
-          <span class="win-text">ПОБЕДА!</span>
-          <span class="info-text">Неудачных нажатий: {failsCount}</span>
-          <span class="info-text">Удачных нажатий: {successCount}</span>
-          <span class="info-text">
+          <span className="win-text">ПОБЕДА!</span>
+          <span className="info-text">Неудачных нажатий: {failsCount}</span>
+          <span className="info-text">Удачных нажатий: {successCount}</span>
+          <span className="info-text">
             Всего нажатий: {successCount + failsCount}
           </span>
           <Button startGame={startGame}>Начать игру</Button>

@@ -7,7 +7,6 @@
 
 body {
   margin: 0;
-
   height: 100vh;
   background: linear-gradient(-45deg, #ffff22, #01d0ff, #0a6485, #8969cd);
   background-size: 400% 400%;
@@ -164,25 +163,28 @@ body {
 @media (min-width: 1px) {
   .card {
     flex-basis: calc((100% / 3) - 1rem);
-    min-height: 0.1rem;
-    font-size: 1.5rem;
+    min-height: 5rem;
+    font-size: 1.8rem;
   }
   .header__title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .modal {
-    width: 37vh;
-    height: 35vh;
+    width: 45vh;
+    height: 50vh;
+  }
+  .game-container {
+    width: 90%;
   }
   .button {
-    font-size: 0.5rem;
+    font-size: 2rem;
   }
 }
 
 @media (min-width: 576px) {
   .card {
     flex-basis: calc((100% / 3) - 1rem);
-    min-height: 5rem;
+    min-height: 10rem;
     font-size: 5rem;
   }
   .header__title {
@@ -192,14 +194,17 @@ body {
     width: 40vh;
     height: 40vh;
   }
+  .game-container {
+    width: 70%;
+  }
   .button {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 }
 @media (min-width: 1024px) {
   .card {
     flex-basis: calc((100% / 3) - 2rem);
-    min-height: 5rem;
+    min-height: 10rem;
     font-size: 5rem;
   }
   .header__title {
@@ -209,6 +214,9 @@ body {
     width: 50vh;
     height: 50vh;
   }
+  .game-container {
+    width: 50%;
+  }
   .button {
     font-size: 2rem;
   }
@@ -217,7 +225,7 @@ body {
 @media (min-width: 1200px) {
   .card {
     flex-basis: calc((100% / 3) - 2rem);
-    min-height: 8rem;
+    min-height: 10rem;
     font-size: 5rem;
     font-size: 5rem;
   }
@@ -227,6 +235,9 @@ body {
   .modal {
     width: 50vh;
     height: 50vh;
+  }
+  .game-container {
+    width: 50%;
   }
   .button {
     font-size: 2rem;
@@ -245,6 +256,9 @@ body {
   .modal {
     width: 50vh;
     height: 50vh;
+  }
+  .game-container {
+    width: 50%;
   }
   .button {
     font-size: 2rem;
