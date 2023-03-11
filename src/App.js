@@ -48,6 +48,7 @@ function App() {
     setButton(false);
     setCardBoard(true);
     results.current.score = 0;
+    results.current.fails = 0;
   };
 
   const setCardsInGame = (card) => {
